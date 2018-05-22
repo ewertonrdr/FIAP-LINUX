@@ -1,9 +1,10 @@
 Como utilizar script:
 
-1. Faça download do arquivo User-Manager-V1.rar. 
+1. Faça download do arquivo User-Manager-V4.rar. 
 2. Extraia numa pasta de sua preferência.
 3. Como root dê permissão para execução do Script.
   3.1 Comando: $chmod +x nac20.sh
 4. Execute o script.
+5. bash nac20.sh
 
 Dúvidas entre em contato ewerton.florencio@outlook.com
