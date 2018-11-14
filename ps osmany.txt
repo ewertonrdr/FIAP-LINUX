@@ -1,0 +1,33 @@
+1. Decriptografar
+
+a) hnkwfijhfjxfw (
+b) fvdgtuesf / key=fiap
+c) YSBwcyBzZXJhIGNyaXB0b2dyYWZhZGE=
+d) 63 79 62 65 72 73 65 63 75 72 69 74 79
+e) 0a 16 04 1f 16 1f 0c 0c 1f / key=oepmyq
+
+2) Sha256 
+echo 123456 | sha256sum
+
+3) Salt definição e uso: 
+ é um dado aleatório que é usado como uma entrada adicional junto a uma senha ou algo semelhante em uma "função de mão única", que gera como saída um hash. A função primária do sal é defender contra ataques de dicionário aliados a aplicação da função hash nesta lista e contra ataques pré-computados como rainbow table. 
+
+Um novo sal é gerado aleatoriamente para cada senha. Em uma configuração típica, o sal e a senha são concatenados e processados com uma função de hash criptográfica, então apenas o resultado e o sal são guardados no banco de dados. O hash permitirá futuras autenticações, como também protege a senha purotexto em situações em que o banco de dados pode estar comprometido
+
+4) Salsa definição e uso:
+
+Ela é construída através de uma função pseudorrandômica baseada na adição de 32-bits, adição bit a bit (XOR) e operações de rotação, que mapeia uma chave de 256 bits, um nonce de 64 bits e uma posição de fluxo de 64 bits em uma saída de 512 bits (existe ainda uma versão de 128 bits). Esse funcionamento dá ao Salsa20 uma vantagem incomum que permite ao usuário realizar buscas de maneira eficiente em qualquer parte do fluxo de saída. Desta forma, ela fornece uma velocidade de cerca de 4-14 ciclos por byte em software em processadores de arquitetura x86 bem como uma razoável performance de hardware. O Salsa20 por sua vez não é patenteado e Bernstein tem escrito diversas implementações de domínio público para as arquiteturas mais comuns. 
+
+5) John the ripper
+
+cp /etc/shadow .
+cp /etc/passwd .
+
+unshadow passwd shadow > credentials.db
+
+john credentials.db
+john --show credentials.db
+
+echo Y7ujyHy | base64 -d
+echo teste | base64
+
